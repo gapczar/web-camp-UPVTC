@@ -1,4 +1,4 @@
 web-camp-UPVTC
 ==============
 
-GapLabs Hackathon Repo for Team UPVTC
+GapLabs Hackathon 2013 Repo for Team UPVTC
