@@ -5,7 +5,7 @@
 		<div class="hero-unit apps-list">
 		<div class="row">
 			<?php for($colCount = 1; $colCount <= 5; $colCount++):?>
-				<div class="image"><img src="design/img.png"/>
+				<div class="image"><img src="<?php echo Util::base_url('images/7x7.png'); ?>"/>
 					<p>Plants vs. Zombies</p>
 				</div>
 			<?php endfor;?>

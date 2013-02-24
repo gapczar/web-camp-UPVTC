@@ -50,13 +50,13 @@
 		}
 
 		public function add_user() {
-			require_once('common/controllers/user_controller.php');
-			
-			$success = User_Controller::insert_user($_POST['username'], $_POST['password'], $_POST['email']);
-			if ($success)
-				$this->vote();
-			else
-				$this->index();
+			//require_once('common/models/user_model.php');
+			//$success = User::insert_user($_POST['username'], $_POST['password'], $_POST['email']);
+			$this->vote();
+		}
+
+		public function add_user_votes() {
+			$this->topfive();
 		}
 
 	}
