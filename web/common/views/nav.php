@@ -8,21 +8,34 @@
 
 			<!--if waray pa-->
 			   <form class="navbar-form pull-right" id = "signin" action = "<?php echo Util::base_url('index.php/login'); ?>">
-              <input class="span2" type="text" placeholder="Email">
-              <input class="span2" type="password" placeholder="Password">
+              <input class="span2" type="text" placeholder="Username" id = "username" />
+              <input class="span2" type="password" placeholder="Password" id = "password"/>
               <button type="submit" class="btn">Sign in</button>
             </form>
             <script type = "text/javascript">
             	$(document).ready(function(){
-            		$("#signin").submit(function(param){
-      //       			$.ajax({
-						//   type: "POST",
-						//   url: $(this).attr('action'),
-						//   data: {username:$(this).children(":first").attr('value')},
-						//   success: success,
-						//   dataType: dataType
-						// });
-            			$(this).children(":first").attr('value');
+            		
+            		$("#signin").submit(function(){
+            			$this = $(this);
+            			// alert("asdadsas"+$("#email").val());
+            			// alert($($(this).children("#email")).val());
+            			// alert($(this).attr('action'));
+            			// alert($($this).attr('action'));
+            			$.ajax({
+						  type: 'POST',
+						  url: $($this).attr('action'),
+						  data: {username:$("#username").val(), password:$("#password").val()},
+						  success: function(data){
+						  	alert("success");
+						  	if( data.result == true )
+						  		window.location = data.message;
+						  	else
+						  		$($this).append("<span style = 'color:red;'>"+data.message+"</span>");
+						  },
+						  error: function(data){ alert('salamat');},
+						  dataType: json
+						});
+            			
             			return false;	
             		});
             	});
