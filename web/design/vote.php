@@ -14,24 +14,29 @@
 	<div class="container">
 		<div class="row">
 			
-				<h1>Choose Your Top 5 Apps!</h1>
-				<h2>Remaining Votes: 5</h2>
+				<h1 class="normalText">Choose Your <span class="emphasizedText">Top 5</span> Apps!</h1>
+				<h2 class="thinText">Remaining Votes: 5</h2>
 			
 		</div>
 
-<div class="hero-unit apps-list">
-	<?php for($rowCount = 1; $rowCount <= 10; $rowCount++):?>
-		<div class="row">
-			<?php for($colCount = 1; $colCount <= 5; $colCount++):?>
-				<div class="image"><img src="design/img.png"/>
-					<p>Plants vs. Zombies</p>
-					<input type="submit" value="Vote" />
-					<input type="submit" value="Unvote" disabled/>
+<div class="scrollable">
+<div class="row hero-unit">
+		<div class="apps-list">
+			<?php for($rowCount = 1; $rowCount <= 10; $rowCount++):?>
+				<div class="row">
+					<?php for($colCount = 1; $colCount <= 5; $colCount++):?>
+						<div class="image"><img src="design/img.png"/>
+							<p>Plants vs. Zombies</p>
+							<input type="submit" value="Vote" />
+							
+						</div>
+					<?php endfor;?>
 				</div>
 			<?php endfor;?>
 		</div>
-	<?php endfor;?>
-
+	</div>
+</div>
+	
 
 </div>
 		<div class="row">
