@@ -26,7 +26,8 @@
 			require_once('common/views/footer.php');
 		}
 
-		public function login(){
+		public function login( $param ){
+			
 			require_once("common/models/user_model.php");
 			echo User::login();	
 		}

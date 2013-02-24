@@ -26,7 +26,6 @@
 			require_once('common/models/database_model.php');
 
 			$db = new Database();
-			echo $username;
 			$stmt = $db->create_prepared_statement('SELECT * FROM user WHERE username = :username');
 			$stmt->execute(
 				array(
@@ -35,9 +34,9 @@
 			);
 
 			if ($stmt->rowCount() > 0)
-				return FALSE;
-			else {
 				return $stmt->fetchAll(PDO::FETCH_ASSOC);
+			else {
+				return FALSE;
 			}
 		}
 
@@ -45,12 +44,13 @@
 		* login function
 		*/
 		public static function login(){
+			$result = User::check_username( 'bots' );
 			$result = User::check_username( $_POST['username'] );
-			$server_response = array("result"=>FALSE, message => "");
+			$server_response = array("result"=>FALSE, "message" => "");
 			if($result !== FALSE ){ // user exists
 				if(md5($_POST['password']) == md5($result['password'])){//correct password
 					session_start();
-					require_once("common/controllers/util.php")
+					require_once("common/controllers/util.php");
 					$_SESSION['usename'] = $_POST['usename'];
 					$server_response['result'] = TRUE;
 					$server_response['message'] = Util::get_base_url( NULL );
