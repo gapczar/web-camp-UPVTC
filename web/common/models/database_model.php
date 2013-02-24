@@ -4,7 +4,7 @@
 		private $con;
 
 		function __construct(){
-			$this->con = new PDO( "mysql:host=localhost;dbname=up;", "root", "" );
+			$this->con = new PDO( "mysql:host=localhost;dbname=up;", "root", "root" );
 		}
 		
 		/**
