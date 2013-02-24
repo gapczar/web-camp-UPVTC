@@ -10,7 +10,9 @@
 			<div class="span6 hero-unit">
 				<div class="row">
 					<div class="span3 instruction">
-						<p>Create Your Account</p>
+						<p>Create</p>
+						<p class="thinText">An</p>
+						<p class="emphasizedText">Account</p>
 					</div>
 					<div class="span2" id="forms">
 						<p><input style="text" placeholder="Username"/></p>
