@@ -20,7 +20,8 @@
 
 		function get_top_five(){
 			$this->statement->execute();
-			$result = $this->statement->fetchAll( PDO::FETCH_ASSOC );
+			return $this->statement->fetchAll( PDO::FETCH_ASSOC );
+
 		}
 	}
 
