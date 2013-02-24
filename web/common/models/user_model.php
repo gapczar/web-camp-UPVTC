@@ -6,7 +6,7 @@
 		 * Inserts a new user into the database.
 		 */
 		public static function insert_user($username, $password, $email) {
-			require_once('database_model.php');
+			require_once('common/models/database_model.php');
 
 			$db = new Database();
 			$stmt = $db->create_prepared_statement('INSERT INTO user VALUES(:username, :password, :email)');
@@ -23,7 +23,7 @@
 		 * Check if the specified $username already exists
 		 */
 		public static function check_username($username) {
-			require_once('database_model.php');
+			require_once('common/models/database_model.php');
 
 			$db = new Database();
 			echo $username;
@@ -50,7 +50,7 @@
 			if($result !== FALSE ){ // user exists
 				if(md5($_POST['password']) == md5($result['password'])){//correct password
 					session_start();
-					require_once("../controllers/util.php")
+					require_once("common/controllers/util.php")
 					$_SESSION['usename'] = $_POST['usename'];
 					$server_response['result'] = TRUE;
 					$server_response['message'] = Util::get_base_url( NULL );

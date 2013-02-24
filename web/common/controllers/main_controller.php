@@ -3,6 +3,7 @@
 	class Main_controller{
 
 		function __construct(){
+			require_once( "common/controllers/util.php" );
 			if(isset($_SERVER['PATH_INFO']) && $_SERVER['PATH_INFO'] != NULL){//uri is calling a function
 				$chop = explode("/", $_SERVER['PATH_INFO']);
 				$function = $chop[1];
@@ -19,7 +20,12 @@
 		}
 
 		public function index( $param ){
-			require_once('design/mainview.php');
+			require_once('common/views/mainview.php');
+		}
+
+		public function login(){
+			require_once("common/models/user_model.php");
+			echo User::login();	
 		}
 	}
 ?>

@@ -1,11 +1,9 @@
 
 <?php
 	class Apps{
-		// private $models = "common/models";
-		private $models = "";
 
 		function __construct(){
-			require_once($this->models."database_model.php");
+			require_once("common/database_model.php");
 			$this->db = new Database();	
 		}
 

@@ -1,11 +1,11 @@
 <?php
-	require_once('nav.php');
+	require_once('common/views/nav.php');
 ?>
 <html>
 <head>
 	<title>Poll Website for Mobile Apps</title>
-	<link rel="stylesheet" type="text/css" href="../css/style.css">
-	<link rel="stylesheet" type="text/css" href="../assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo Util::base_url('css/style.css'); ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo Util::base_url('assets/bootstrap/css/bootstrap.min.css'); ?>">
 
 </head>
 <body>
