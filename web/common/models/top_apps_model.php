@@ -3,7 +3,7 @@
 	class Apps{
 
 		function __construct(){
-			require_once("common/database_model.php");
+			require_once("common/models/database_model.php");
 			$this->db = new Database();	
 		}
 
@@ -28,8 +28,8 @@
 		}
 	}
 
-	//demo for using the class
-	$top = new Apps();
-	$top5 = $top->get_top_five();
-	$apps = $top->get_apps();
+	// //demo for using the class
+	// $top = new Apps();
+	// $top5 = $top->get_top_five();
+	// $apps = $top->get_apps();
 ?>

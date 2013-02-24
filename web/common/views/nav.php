@@ -3,15 +3,19 @@
 		<div class="container">
 			<!--if nkalogin na-->
 			<a class="brand" href="">Mobile Apps Poll</a>
-			<p class="navbar-text pull-right">myUsername
-			<a href="">Logout</a>
+<!-- 			<p class="navbar-text pull-right">myUsername
+			<a href="">Logout</a> -->
 
 			<!--if waray pa-->
 			   <form class="navbar-form pull-right" id = "signin" action = "<?php echo Util::base_url('index.php/login'); ?>">
               <input class="span2" type="text" placeholder="Username" id = "username" />
               <input class="span2" type="password" placeholder="Password" id = "password"/>
+<!-- 			  <form class="navbar-form pull-right" id = "signin" action = "<?php echo Util::base_url('index.php/login'); ?>">
+              <input class="span2" type="text" placeholder="Email">
+              <input class="span2" type="password" placeholder="Password">
+>>>>>>> 9caab3232670f25e7341543b4a28a6655806973d
               <button type="submit" class="btn">Sign in</button>
-            </form>
+            </form> -->
             <script type = "text/javascript">
             	$(document).ready(function(){
             		

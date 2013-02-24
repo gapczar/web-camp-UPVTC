@@ -33,6 +33,10 @@
 		}
 
 		public function vote() {
+			require_once('common/models/top_apps_model.php');
+			$apps = new Apps();
+			$app_list = $apps->get_apps();
+
 			require_once('common/views/header.php');
 			require_once('common/views/nav.php');
 			require_once('common/views/vote.php');
@@ -44,6 +48,16 @@
 			require_once('common/views/nav.php');
 			require_once('common/views/top5.php');
 			require_once('common/views/footer.php');
+		}
+
+		public function add_user() {
+			require_once('common/controllers/user_controller.php');
+			
+			$success = User_Controller::insert_user($_POST['username'], $_POST['password'], $_POST['email']);
+			if ($success)
+				$this->vote();
+			else
+				$this->index();
 		}
 
 	}
