@@ -2,6 +2,7 @@ body {
 	padding: 70px;
 	overflow: auto;
 	background-image: url('../assets/background.png');
+	/**/
 }
 
 
@@ -10,9 +11,21 @@ body {
 	text-align: center;
 }
 
-.instruction p{
-	font-size: 50px;
+.instruction p.thinText{
+	font-weight: 100;
+	
+}
+
+.instruction p.emphasizedText{
+	font-weight: 800;
+	
+}
+
+.instruction {
 	border-right: 1px solid #ccc;
+	font-size: 50px;
+	padding-right: 20px;
+	margin-right: 10px;
 }
 
 h1, h2 {
