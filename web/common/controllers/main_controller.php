@@ -20,8 +20,8 @@
 		}
 
 		public function index( $param ){
-			require_once('common/views/nav.php');
 			require_once('common/views/header.php');
+			require_once('common/views/nav.php');
 			require_once('common/views/mainview.php');
 			require_once('common/views/footer.php');
 		}
@@ -30,5 +30,20 @@
 			require_once("common/models/user_model.php");
 			echo User::login();	
 		}
+
+		public function vote() {
+			require_once('common/views/header.php');
+			require_once('common/views/nav.php');
+			require_once('common/views/vote.php');
+			require_once('common/views/footer.php');
+		}
+
+		public function topfive() {
+			require_once('common/views/header.php');
+			require_once('common/views/nav.php');
+			require_once('common/views/top5.php');
+			require_once('common/views/footer.php');
+		}
+
 	}
 ?>
