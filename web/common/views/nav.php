@@ -10,6 +10,7 @@
 			   <form class="navbar-form pull-right" id = "signin" action = "<?php echo Util::base_url('index.php/login'); ?>">
               <input class="span2" type="text" placeholder="Username" id = "username" />
               <input class="span2" type="password" placeholder="Password" id = "password"/>
+          </form>
 <!-- 			  <form class="navbar-form pull-right" id = "signin" action = "<?php echo Util::base_url('index.php/login'); ?>">
               <input class="span2" type="text" placeholder="Email">
               <input class="span2" type="password" placeholder="Password">
