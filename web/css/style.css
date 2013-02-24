@@ -1,8 +1,11 @@
 body {
 	padding: 70px;
 	overflow: auto;
-	background-image: url('../assets/background.png');
-	/**/
+	background-image: url('../assets/images/background.png');
+}
+
+h1, h2 {
+	text-align: center;
 }
 
 
@@ -11,14 +14,19 @@ body {
 	text-align: center;
 }
 
-.instruction p.thinText{
+.thinText{
 	font-weight: 100;
 	
 }
 
-.instruction p.emphasizedText{
+.emphasizedText{
 	font-weight: 800;
 	
+}
+
+.normalText{
+	font-weight:300;
+
 }
 
 .instruction {
@@ -28,29 +36,33 @@ body {
 	margin-right: 10px;
 }
 
-h1, h2 {
-text-align: center;
-}
-
 .image {
 	padding: 10px;
 	float: left;
+	text-align: center
+}
+
+.scrollabe, .top-apps{
+	margin-top: 40px;
 }
 
 .apps-list {
-	height: 275px;
 	overflow: auto;
-}
-
-#submit-button{
-	text-align: center;
+	height: 275px;
+	padding:0 10px;
+	font-size: 100%;
 }
 
 .hero-unit {
-	background-image: url('../assets/bg.png');
+	background-image: url('../assets/images/bg.png');
 }
+
 
 #forms {
 	float: left;
 
+}
+
+#submit-button{
+	text-align: center;
 }
