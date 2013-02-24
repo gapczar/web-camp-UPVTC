@@ -20,7 +20,10 @@
 		}
 
 		public function index( $param ){
+			require_once('common/views/nav.php');
+			require_once('common/views/header.php');
 			require_once('common/views/mainview.php');
+			require_once('common/views/footer.php');
 		}
 
 		public function login(){
