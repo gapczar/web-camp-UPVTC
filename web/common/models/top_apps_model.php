@@ -21,7 +21,6 @@
 		function get_top_five(){
 			$this->statement->execute();
 			$result = $this->statement->fetchAll( PDO::FETCH_ASSOC );
-			var_dump($result);
 		}
 	}
 
