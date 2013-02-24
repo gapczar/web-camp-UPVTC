@@ -1,5 +1,5 @@
 <?php
-
-require_once('design/mainview.php');
+	require_once("common/controllers/main_controller.php");
+	new Main_controller();
 
 ?>

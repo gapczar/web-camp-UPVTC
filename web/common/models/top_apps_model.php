@@ -1,30 +1,37 @@
 
 <?php
-	class Top_apps{
+	class Apps{
 		// private $models = "common/models";
 		private $models = "";
-		private $statement;
 
 		function __construct(){
 			require_once($this->models."database_model.php");
-			$db = new Database();
-			
+			$this->db = new Database();	
+		}
+
+		function get_top_five(){
 			$query = "SELECT count(uv.app_id), a.name, a.icon
 					   FROM user_vote as uv, app as a
 					   WHERE uv.app_id = a.app_id
 						   GROUP BY uv.app_id
 						   ORDER BY uv.app_id ASC
 						LIMIT 5";
-			$this->statement = $db->create_prepared_statement( $query );
+			$statement = $this->db->create_prepared_statement( $query );
+			$statement->execute();
+			return $statement->fetchAll( PDO::FETCH_ASSOC );
+
 		}
 
-		function get_top_five(){
-			$this->statement->execute();
-			return $this->statement->fetchAll( PDO::FETCH_ASSOC );
-
+		function get_apps(){
+			$query = "SELECT * FROM app";
+			$statement = $this->db->create_prepared_statement( $query );
+			$statement->execute();
+			return $statement->fetchAll( PDO::FETCH_ASSOC );
 		}
 	}
 
-	$top = new Top_apps();
-	$top->get_top_five();
+	//demo for using the class
+	$top = new Apps();
+	$top5 = $top->get_top_five();
+	$apps = $top->get_apps();
 ?>
