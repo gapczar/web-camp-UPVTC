@@ -16,25 +16,25 @@
             	$(document).ready(function(){
             		
             		$("#signin").submit(function(){
-            			$this = $(this);
-            			// alert("asdadsas"+$("#email").val());
-            			// alert($($(this).children("#email")).val());
-            			// alert($(this).attr('action'));
-            			// alert($($this).attr('action'));
-            			$.ajax({
-						  type: 'POST',
-						  url: $($this).attr('action'),
-						  data: {username:$("#username").val(), password:$("#password").val()},
-						  success: function(data){
-						  	alert("success");
-						  	if( data.result == true )
-						  		window.location = data.message;
-						  	else
-						  		$($this).append("<span style = 'color:red;'>"+data.message+"</span>");
-						  },
-						  error: function(data){ alert('salamat');},
-						  dataType: json
-						});
+      //       			$this = $(this);
+      //       			// alert("asdadsas"+$("#email").val());
+      //       			// alert($($(this).children("#email")).val());
+      //       			// alert($(this).attr('action'));
+      //       			// alert($($this).attr('action'));
+      //       			$.ajax({
+						//   type: 'POST',
+						//   url: $($this).attr('action'),
+						//   data: {username:$("#username").val(), password:$("#password").val()},
+						//   success: function(data){
+						//   	alert("success");
+						//   	if( data.result == true )
+						//   		window.location = data.message;
+						//   	else
+						//   		$($this).append("<span style = 'color:red;'>"+data.message+"</span>");
+						//   },
+						//   error: function(data){ alert('salamat');},
+						//   dataType: json
+						// });
             			
             			return false;	
             		});
