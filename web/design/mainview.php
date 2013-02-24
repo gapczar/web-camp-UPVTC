@@ -13,29 +13,31 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="span12">
+			
 				<h1>Vote for your fave web apps now!</h1>
-			</div>
 		</div>
 		
-		
-			<div class="row span10 signup">
-				<div class="span4">
-					<p>Create Your Account</p>
+		<div class="row signup">
+			<div class="span2"></div>
+			<div class="span6 hero-unit">
+				<div class="row">
+					<div class="span3">
+						Create Your Account
+					</div>
+					<div class="span3">
+						<p><input style="text" placeholder="Username"/></p>
+						<p><input style="text" placeholder="Password"/></p>
+						<p><input style="text" placeholder="Email Address"/></p>
+						<p><input type="submit" value="Continue"/></p>
+					</div>
 				</div>
-				<div class="span4">
-					<p><input style="text" placeholder="Username"/></p>
-					<p><input style="text" placeholder="Password"/></p>
-					<p><input style="text" placeholder="Email Address"/></p>
-					<p><a href="design/vote.php">continue</a></p>
-				</div>
+				<div class="row">
+					Already have an account? Login <a href=""> here. </a>
+				</div>	
 			</div>
 		
-		<div class="row">
-			<div class="span12">
-				Already have an account? Login <a href=""> here. </a>
-			</div>
-		</div>
+	
+	</div>
 	</div>
 </body>
 </html>
