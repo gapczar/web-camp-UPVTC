@@ -1,5 +1,6 @@
 body {
 	padding: 70px;
+	overflow: auto;
 }
 
 
@@ -13,7 +14,15 @@ text-align: center;
 }
 
 .image {
-	margin: 0 10px;
 	padding: 10px;
 	float: left;
+}
+
+.apps-list {
+	height: 275px;
+	overflow: auto;
+}
+
+#submit-button{
+	text-align: center;
 }

@@ -19,7 +19,7 @@
 			
 		</div>
 
-<div class="hero-unit">
+<div class="hero-unit apps-list">
 	<?php for($rowCount = 1; $rowCount <= 10; $rowCount++):?>
 		<div class="row">
 			<?php for($colCount = 1; $colCount <= 5; $colCount++):?>
@@ -34,7 +34,11 @@
 
 
 </div>
-		
+		<div class="row">
+			
+				<p id="submit-button"><input type="submit" value="Submit Votes"></p>
+			
+		</div>	
 
 	</div>
 </body>

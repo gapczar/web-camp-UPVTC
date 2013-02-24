@@ -12,7 +12,7 @@
 
 
 	<div class="container">
-		<div class="hero-unit">
+		<div class="hero-unit apps-list">
 <div class="row">
 			
 				<h1>Your Top 5 Apps</h1>

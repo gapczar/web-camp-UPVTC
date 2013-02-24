@@ -1,5 +1,5 @@
 <?php
 
-require_once('design/mainview.php');
+require_once('design/vote.php');
 
 ?>
