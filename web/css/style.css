@@ -1,12 +1,18 @@
 body {
 	padding: 70px;
 	overflow: auto;
+	background-image: url('../assets/background.png');
 }
 
 
 .signup {
 	padding: 40px 0 0 0;
 	text-align: center;
+}
+
+.instruction p{
+	font-size: 50px;
+	border-right: 1px solid #ccc;
 }
 
 h1, h2 {
@@ -25,4 +31,13 @@ text-align: center;
 
 #submit-button{
 	text-align: center;
+}
+
+.hero-unit {
+	background-image: url('../assets/bg.png');
+}
+
+#forms {
+	float: left;
+
 }

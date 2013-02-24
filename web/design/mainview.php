@@ -1,30 +1,22 @@
 <?php
 	require_once('nav.php');
+	require_once('header.php');
 ?>
-<html>
-<head>
-	<title>Poll Website for Mobile Apps</title>
-	<link rel="stylesheet" type="text/css" href="../css/style.css">
-	<link rel="stylesheet" type="text/css" href="../assets/bootstrap/css/bootstrap.min.css">
-
-</head>
-<body>
-
 
 	<div class="container">
 		<div class="row">
 			
-				<h1>Vote for your fave web apps now!</h1>
+				<h1>Vote for your fave mobile apps now!</h1>
 		</div>
 		
 		<div class="row signup">
 			<div class="span2"></div>
 			<div class="span6 hero-unit">
 				<div class="row">
-					<div class="span3">
-						Create Your Account
+					<div class="span3 instruction">
+						<p>Create Your Account</p>
 					</div>
-					<div class="span3">
+					<div class="span2" id="forms">
 						<p><input style="text" placeholder="Username"/></p>
 						<p><input style="text" placeholder="Password"/></p>
 						<p><input style="text" placeholder="Email Address"/></p>
@@ -39,5 +31,7 @@
 	
 	</div>
 	</div>
-</body>
-</html>
+	
+<?php
+	require_once('footer.php');
+?>
